@@ -3,7 +3,6 @@
 <head>
   <link rel="icon" type="image/x-icon" href="https://drive.google.com/uc?id=1-XZZQUbgsiRPzFygbtq0_iPaQNiU2FXi">
   <link rel="stylesheet" type="text/css" href="css/mywebsite.css">
-  <script type="text/javascript" src="script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="decription" content="This is my personal website homepage-it shows the menu and connects to other pages">
@@ -15,34 +14,57 @@
     <div class="nav-menu"> 
         <a class="active" href="index.html">Home</a>
         <a href="about-us.html">About Us</a>
-        <a href="contact-us.html">Contact Us</a>
-        <a href="products/single-products.html">Products</a>  
+        <a href="projects.html">Projects</a>
+        <a href="contact-us.html">Contact Us</a>  
     </div>
     <h4>My Personal Website</h4><br>
     <h2>Clarissa Pholeuanghong</h2>
   </header>
   
   <main class="main" align="center">
-      <div class="myimage">
-      <img src="https://drive.google.com/uc?id=1uwqc7IJdqlgg6pL63dsRNaKaGhn_fB6w" alt="my photo">
-      </div>
-      <div class="maintext">
-      <h3>Introduction</h3>
-      <p>Welcome to my landing page! Here you will find some information about me and my journey to become a software developer and beyond. Should you wish to connect with me, please don't hesitate to leave your contact info in the form at the bottom of the page.</p>
-      <h3>About Me</h3>
-      <p>My name is Clarissa Pholeuanghong. I know, I know..youre probably thinking, "wow thats a long last name!"
-       I've heard it plenty of times. My last name is of Laotian origin. My father is from 
-       <a href="https://en.wikipedia.org/wiki/Laos" target="_blank">Laos</a> 
-       and my mother is from Mexican descent. I'm 33 and was born and raised in Dallas, TX. I am an introvert 100%. I live with my boyfriend Josh and our two cats and dog, Lizzy, Chucky, and Ariel.
-       After graduating highschool, I joined the Air Force for 4 years as a Medic. I am very proud that I was able to 
-       graduate Basic Training as it was vigorous and challenging. I have been fortunate 
-       to travel to Japan and live there a couple of years.
-       I would say I'm a pretty big Harry Potter fan. <span style="color:yellow;"><strong>Hufflepuff all the way!</strong></span> I love all things related to the Wizarding World.
-       Here is a <a href="https://twitter.com/tweet_y14/" target="_blank">link to my Twitter</a> if you wish to connect and tell me which wizarding house you're in. 
-        </p>
-        <h3>Developer Journey Blog</h3>
-      <p>My journey in web developing began in high school and it's where I built my very first web page. But that was years ago and it feels like I'm learning it all over again. It seems more challenging now than it did years ago but its satisfying to challenge myself by continuing my education and learning new skills. Thats what I like about the tech industry, there's always something new to learn. I have learned so much in my software development class and I'm only three weeks in. There is still so much to learn and I am enjoying the ride! So far we have learned basic, intermediate, and advanced HTML and CSS. This past week we just learned some Bootstrap which I find to be interesting and I'm looking to explore it a bit further since it seems like it could be a useful tool. I understand that we will also be learning Java and I am looking forward to learning more on the subject as I do have a small bit of knowledge on it.  </p>
-      </div>
+    <div class="container">
+      <section class="item">
+        <div class="myimage">
+          <img src="https://drive.google.com/uc?id=1uwqc7IJdqlgg6pL63dsRNaKaGhn_fB6w" alt="my photo">
+        </div>
+      </section>
+      <!-- <div class="maintext"> -->
+      <section class="item left">
+        <div class="item__content">
+          <h3>Introduction</h3>
+          <p>Welcome to my landing page! Here you will find some information about me and my journey to become a software developer and beyond. 
+            Should you wish to connect with me, please don't hesitate to leave your contact info in the form at the bottom of the page.</p>
+        </div>
+      </section>
+      <section class="item right">
+        <div class="item__content">
+          <h3>About Me</h3>
+          <p> My name is Clarissa Pholeuanghong. I know, I know..youre probably thinking, "wow thats a long last name!"
+            I've heard it plenty of times. My last name is of Laotian origin. My father is from 
+            <a href="https://en.wikipedia.org/wiki/Laos" target="_blank">Laos</a> 
+            and my mother is from Mexican descent. I'm 33 and was born and raised in Dallas, TX. I am an introvert 100%. I live with my boyfriend Josh and our two cats and dog, Lizzy, Chucky, and Ariel.
+            After graduating highschool, I joined the Air Force for 4 years as a Medic. I am very proud that I was able to 
+            graduate Basic Training as it was vigorous and challenging. I have been fortunate 
+            to travel to Japan and live there a couple of years.
+            I would say I'm a pretty big Harry Potter fan. <span style="color:yellow;"><strong>Hufflepuff all the way!</strong></span> I love all things related to the Wizarding World.
+            Here is a <a href="https://twitter.com/tweet_y14/" target="_blank">link to my Twitter</a> if you wish to connect and tell me which wizarding house you're in. 
+          </p>
+        </div>
+      </section>
+      <section class="item left">
+        <div class="item__content">
+          <h3>Developer Journey Blog</h3>
+          <p>My journey in web developing began in high school and it's where I built my very first web page. But that was years ago and it feels like I'm 
+            learning it all over again. It seems more challenging now than it did years ago but its satisfying to challenge myself by continuing my education 
+            and learning new skills. Thats what I like about the tech industry, there's always something new to learn. I have learned so much in my software development 
+            class and I'm only three weeks in. There is still so much to learn and I am enjoying the ride! So far we have learned basic, intermediate, and advanced HTML and 
+            CSS. This past week we just learned some Bootstrap which I find to be interesting and I'm looking to explore it a bit further since it seems like it could be a 
+            useful tool. I understand that we will also be learning Java and I am looking forward to learning more on the subject as I do have a small bit of knowledge on it.  
+          </p>
+        </div>
+      </section>
+      <!-- </div> -->
+    </div>  
   </main>
   
   <footer class="footer">
@@ -63,6 +85,6 @@
         
       </div>
     </footer>
-  
+  <script type="text/javascript" src="javascript/script.js"></script>
 </body>
 </html>

@@ -1,44 +1,67 @@
-const images = document.querySelectorAll('#slider img');
-const previousImage = document.getElementById("prev");
-const nextImage = document.getElementById("next");
+// const images = document.querySelectorAll('#slider img');
+// const previousImage = document.getElementById("prev");
+// const nextImage = document.getElementById("next");
 
-let currentIndex = 0;
+// fade in and slide in on scroll sections
+const items = document.querySelectorAll('.item:not(:first-child)');
 
-function reset() {
-    for (let i = 0; i < images.length; i++) {
-      images[i].classList.remove('active');
+const options = {
+  threshold: 0.5
+}
+
+function addSlideIn(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('slide-in');
     }
-  }
+  });
+}
 
-  function initializeSlider() {
-    reset();
-    images[currentIndex].classList.add('active');
-  }
+const observer = new IntersectionObserver(addSlideIn, options)
 
-  function slideLeft() {
-    reset();
-    currentIndex--;
-    if (currentIndex < 0) {
-      currentIndex = images.length - 1;
-    }
-    images[currentIndex].classList.add('active');
-  }
+items.forEach(item => {
+  observer.observe(item);
+})
+
+
+// 
+// let currentIndex = 0;
+
+// function reset() {
+//     for (let i = 0; i < images.length; i++) {
+//       images[i].classList.remove('active');
+//     }
+//   }
+
+//   function initializeSlider() {
+//     reset();
+//     images[currentIndex].classList.add('active');
+//   }
+
+//   function slideLeft() {
+//     reset();
+//     currentIndex--;
+//     if (currentIndex < 0) {
+//       currentIndex = images.length - 1;
+//     }
+//     images[currentIndex].classList.add('active');
+//   }
   
-  function slideRight() {
-    reset();
-    currentIndex++;
-    if (currentIndex >= images.length) {
-      currentIndex = 0;
-    }
-    images[currentIndex].classList.add('active');
-  }
+//   function slideRight() {
+//     reset();
+//     currentIndex++;
+//     if (currentIndex >= images.length) {
+//       currentIndex = 0;
+//     }
+//     images[currentIndex].classList.add('active');
+//   }
 
-  initializeSlider();
+//   initializeSlider();
 
-previousImage.addEventListener('click', function() {
-  slideLeft();
-});
+// previousImage.addEventListener('click', function() {
+//   slideLeft();
+// });
 
-nextImage.addEventListener('click', function() {
-  slideRight();
-});
+// nextImage.addEventListener('click', function() {
+//   slideRight();
+// });
