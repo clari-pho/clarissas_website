@@ -3,6 +3,7 @@
 <head>
   <link rel="icon" type="image/x-icon" href="https://drive.google.com/uc?id=1-XZZQUbgsiRPzFygbtq0_iPaQNiU2FXi">
   <link rel="stylesheet" type="text/css" href="css/mywebsite.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="decription" content="This is my personal website homepage-it shows the menu and connects to other pages">
@@ -70,21 +71,70 @@
   <footer class="footer">
       <div class="form">
       <h2>Contact</h2>
-        <form action="/example_action.html">
-          <label for="fName">First Name:</label><br>
-          <input type="text" id="fName" name="fName"><br>
-          <label for="fLastName">Last Name:</label><br>
-          <input type="text" id="fLastName" name="fLastName"><br>
-          <label for="email">Email:</label><br>
-          <input type="text" id="email" name="email"><br>
-          <label for="tnumber">Telephone Number:</label><br>
-          <input type="text" id="tnumber" name="tnumber"><br>
-          <input type="submit" value="Save">
-          
+      <div id="form-submitted-msg">Form successfully submitted!</div>
+        <form id="contactForm" action="/example_action.html">
+          <div class="input-group">
+            <label for="fName" class="form-label">First Name:</label><br>
+            <input type="text" id="fName" name="fName" class="form-control"><br>
+            <small class="error-msg invalid-feedback">Required</small>
+          </div>
+
+          <div class="input-group">
+            <label for="fLastName" class="form-label">Last Name:</label><br>
+            <input type="text" id="fLastName" name="fLastName" class="form-control"><br>
+            <small class="error-msg invalid-feedback">Required</small>
+          </div>
+
+          <div class="input-group">
+            <label for="email" class="form-label">Email:</label><br>
+            <input type="text" id="email" name="email" class="form-control"><br>
+            <small class="error-msg invalid-feedback">Required</small>
+          </div>
+
+          <div class="input-group">
+            <label for="tnumber" class="form-label">Telephone Number:</label><br>
+            <input type="text" id="tnumber" name="tnumber" class="form-control"><br>
+            <small class="error-msg invalid-feedback">Required</small>
+          </div>
+
+          <div class="input-group select">
+            <label for="password" class="form-label">Select Account Type </label>
+            <select id="accountType" name="accountType" class="form-select" required>
+              <option value="Please select an option" selected class="text-muted">Please select an option</option>
+              <option value="Free Account">Free Account</option>
+              <option value="Premium Account">Premium Account</option>
+            </select>
+            <small class="error-msg invalid-feedback">Required</small>
+          </div>
+          <div class="input-group radio">
+            <div class="form-check">
+              <input type="radio" id="personal" name="purpose" value="Personal" class="form-check-input" required>
+              <label for="personal" class="form-check-label">Personal</label>
+              <small class="error-msg invalid-feedback">Required</small>
+            </div>
+        
+            <div class="form-check">
+              <input type="radio" id="business" name="purpose" value="Business" class="form-check-input" required>
+              <label for="business" class="form-check-label">Business</label>
+              <small class="error-msg invalid-feedback">Required</small>
+            </div>
+          </div>
+          <div class="input-group checkbox form-check">
+            <input type="checkbox" name="subscribe" id="subscribeYes" class="form-check-input" required>
+            <label for="subscribeYes" class="form-check-label">Subscribe to our newsletter?</label>
+            <small class="error-msg invalid-feedback">Required</small>
+          </div>
+
+          <div class="form-btns">
+            <button type="submit" class="btn btn-primary submit" disabled>SUBMIT</button>
+            <button type="reset" class="btn btn-secondary">CLEAR FORM</button>
+          </div>
+
         </form>
         
       </div>
     </footer>
   <script type="text/javascript" src="javascript/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
