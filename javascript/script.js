@@ -150,6 +150,21 @@ formElements.forEach((element) => {
 form.addEventListener('submit', (e) => handleSubmit(e))
 
 
+// leaflet map script
+var map = L.map('map').setView([28.475210, //latitude
+                                -81.474930], //longitude
+                                    13);    //zoom
+
+var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        // add marker to map
+        var marker = L.marker([28.475210, -81.474930]).addTo(map);
+
+
+
 
 // let currentIndex = 0;
 
